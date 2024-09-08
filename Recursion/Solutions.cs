@@ -88,12 +88,23 @@ namespace data_structures
             }
         }
 
-        public void decimalToBinary(int n)
+        public static string decimalToBinary(int n)
         {
-            if (n % 2 == 0)
+            if (n == 0)
             {
-                return;
+                return "0";
             }
+            if(n == 1)
+            {
+                return "1";
+            }
+            string reminder = Convert.ToString(n % 2);
+            return decimalToBinary(n / 2) + reminder;
+        }
+
+        public static void Gcd(int a, int b)
+        {
+
         }
 
     }
